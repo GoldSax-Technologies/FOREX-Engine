@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+ <head> 
+
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  userdetails();
+});
+
+
+function userdetails(){
+     $.post('RENUKA.php',function(data){
+         $('.result').html(data);
+       });     
+
+       setTimeout("userdetails()",2000);
+}
+</script>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" border="0"
+ bgcolor="black" id="shell" height="13" width="1500">
+<tr height="13"><td colspan="20" bgcolor="white">
+<table title="Banner" id="banner" border="0">
+
+<tr><td>
+<div class="result"></div>
+</tr></td>
+
+</body>
+</html>
+
